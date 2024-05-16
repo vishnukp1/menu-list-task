@@ -5,7 +5,7 @@ const itemsSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    description: String,
+  
 });
 
 module.exports = mongoose.model('Items', itemsSchema);

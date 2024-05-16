@@ -29,10 +29,10 @@ import { data } from "autoprefixer";
         try {
           const data = await getItems(); 
           setGetItem(data);
-  
+
        
-          const filteredDrinks = data.filter(item => item.category === 'Drinks');
-          const filteredBrunchCocktails = data.filter(item => item.category === 'Brunch Cocktails');
+          const filteredDrinks = data.filter(item => item.category === 'DRINKS');
+          const filteredBrunchCocktails = data.filter(item => item.category === 'BRUNCH COCKTAILS');
   
           setDrinks(filteredDrinks);
           setBrunchCocktails(filteredBrunchCocktails);

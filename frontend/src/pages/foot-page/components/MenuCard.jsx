@@ -43,7 +43,7 @@ const MenuCard = ({image1,image2,topLengths,data}) => {
                   <p className="text-lg font-medium text-[#7B7B7B]">
                     {category.menuItems.map((item, itemIndex) => (
                       <span key={item._id} style={{ fontFamily: "Kelly Slab, sans-serif" }}>
-                        {item.name}
+                        {item.title}
                         {itemIndex !== category.menuItems.length - 1 && ", "}
                       </span>
                     ))}

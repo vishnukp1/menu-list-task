@@ -2,15 +2,18 @@ const MenuCategory = require("../models/CategorySchema");
 const MenuItem = require("../models/itemsSchema");
 
 const AddItems = async (req, res) => {
-  const { Name, category, price, menuItems } = req.body;
+  const { title, category, price, menuItems } = req.body;
+  
   const items = await Promise.all(menuItems.map(async (itemName) => {
-    const item = new MenuItem({ name: itemName });
+    const item = new MenuItem({ title: itemName });
+    console.log("hii");
     await item.save();
     return item._id;
 }));
 
+
   const categorylist = new MenuCategory({
-    name: Name,
+    title: title,
     category: category,
     price: price,
     menuItems: items,
