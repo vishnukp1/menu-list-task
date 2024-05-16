@@ -1,13 +1,22 @@
-import { useState } from 'react';
-import { AppBar, Toolbar, IconButton, Typography, Menu, MenuItem, useMediaQuery, Box } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import Button from '@mui/material/Button';
-import { LOGO } from '../../assets';
+import { useState } from "react";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  MenuItem,
+  useMediaQuery,
+  Box,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import Button from "@mui/material/Button";
+import { LOGO } from "../../assets";
 
 function Navbar() {
-  const isMobile = useMediaQuery('(max-width: 600px)'); 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); 
-  const [anchorEl, setAnchorEl] = useState(null); 
+  const isMobile = useMediaQuery("(max-width: 600px)");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   const handleMenuClick = (event) => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -20,30 +29,42 @@ function Navbar() {
   };
 
   const menuItems = [
-    { label: 'HOME', link: '#' },
-    { label: 'MENU', link: '#' },
-    { label: 'MAKE A RESERVATION', link: '#' },
-    { label: 'CONTACT US', link: '#' },
+    { label: "HOME", link: "#" },
+    { label: "MENU", link: "#" },
+    { label: "MAKE A RESERVATION", link: "#" },
+    { label: "CONTACT US", link: "#" },
   ];
 
   const labelStyles = {
     fontWeight: 400,
-    fontSize: '16px',
-    lineHeight: '23.71px',
-    letterSpacing: '3%',
+    fontSize: "16px",
+    lineHeight: "23.71px",
+    letterSpacing: "3%",
     "&:hover": {
       color: "#0796EF",
     },
   };
 
   return (
-    <AppBar position="static" style={{ backgroundColor: "#121618", height: '100px' }}>
+    <AppBar
+      position="static"
+      style={{ backgroundColor: "#121618", height: "100px" }}
+    >
       <Toolbar>
-        <Box sx={{ flexGrow: 1, mt: 12, ml: isMobile ? 14 : 4, zIndex: 1, display: "flex" }}>
+        <Box
+          sx={{
+            flexGrow: 1,
+            mt: 12,
+            ml: isMobile ? 14 : 4,
+            zIndex: 1,
+            display: "flex",
+          }}
+        >
           <img src={LOGO} alt="Logo" />
           {!isMobile && (
             <Typography variant="h6" sx={{ mt: "2px" }} component="div">
-              <span className='text-[#0796EF]'> DEEP</span> NET <br /><span className='text-[#857878]'>SOFT</span>
+              <span className="text-[#0796EF]"> DEEP</span> NET <br />
+              <span className="text-[#857878]">SOFT</span>
             </Typography>
           )}
         </Box>
@@ -78,12 +99,12 @@ function Navbar() {
         open={mobileMenuOpen}
         onClose={handleMenuClose}
         anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
+          vertical: "top",
+          horizontal: "right",
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
+          vertical: "top",
+          horizontal: "right",
         }}
       >
         {menuItems.map((item) => (
