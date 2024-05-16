@@ -65,7 +65,7 @@ import { data } from "autoprefixer";
             <div className="absolute inset-0 flex flex-col justify-center items-center h-full">
               <div className="text-center mb-2 ">
                 <h2
-                  className="text-white font-bold md:text-5xl lg:text-6xl"
+                  className="text-white font-bold md:text-5xl lg:text-6xl xs:text-[40px]"
                   style={{ textShadow: "4px 3px #800020" }}
                 >
                   MENU
@@ -127,7 +127,7 @@ import { data } from "autoprefixer";
           
             <MenuCard image1={JAR} image2={CUP} topLengths={topLengths_drinks} data={drinks} title="DRINKS"/>
             <MenuCard brunch_className="lg:top-[352px] md:top-[570px]  xs:top-[780px]" image2={COCKTAIL_ONE} image1={COCKTAIL_TWO}  data={brunchCocktails} title="BRUNCH COCKTAILS"/>
-            <FlavorCard />
+            <FlavorCard  />
   
             <div className="flex mb-[80px] mt-[-50px] justify-center">
               <button

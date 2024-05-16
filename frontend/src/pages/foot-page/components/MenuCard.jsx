@@ -14,7 +14,7 @@ const MenuCard = ({ image1, image2,  data, title,brunch_className }) => {
         <div className="w-full h-fit flex justify-center items-center gap-5 p-1 relative">
           <div className="text-[#544C4C] w-32 h-1 bg-[#544C4C]"></div>
           <div
-            className="text-white text-center my-16 font-oswald font-semibold text-6xl leading-[74.1px] tracking-wide"
+            className="text-white text-center my-16 font-oswald font-semibold text-6xl xs:text-[30px] leading-[74.1px] tracking-wide"
             style={{ textShadow: "4px 3px #800020" }}
           >
             {title}
