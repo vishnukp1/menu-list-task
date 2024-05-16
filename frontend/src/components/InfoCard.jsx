@@ -17,6 +17,7 @@ const InfoCard = ({ title, content, logo, socialMedia, zIndex }) => {
         position: "relative",
         overflow: "visible",
         zIndex: zIndex,
+        mx: (theme) => theme.breakpoints.down("xs") ? "38px" : undefined
       }}
     >
       <CardContent>

@@ -5,9 +5,9 @@ import Button from '@mui/material/Button';
 import { LOGO } from '../../assets';
 
 function Navbar() {
-  const isMobile = useMediaQuery('(max-width: 600px)'); // Adjust breakpoint as needed
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // State for mobile menu visibility
-  const [anchorEl, setAnchorEl] = useState(null); // State for anchor element of the menu
+  const isMobile = useMediaQuery('(max-width: 600px)'); 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); 
+  const [anchorEl, setAnchorEl] = useState(null); 
 
   const handleMenuClick = (event) => {
     setMobileMenuOpen(!mobileMenuOpen);
