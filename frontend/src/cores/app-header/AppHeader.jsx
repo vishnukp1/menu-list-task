@@ -39,7 +39,7 @@ function Navbar() {
   return (
     <AppBar position="static" style={{ backgroundColor: "#121618", height: '100px' }}>
       <Toolbar>
-        <Box sx={{ flexGrow: 1, mt: 12, ml: isMobile ? 18 : 4, zIndex: 1, display: "flex" }}>
+        <Box sx={{ flexGrow: 1, mt: 12, ml: isMobile ? 14 : 4, zIndex: 1, display: "flex" }}>
           <img src={LOGO} alt="Logo" />
           {!isMobile && (
             <Typography variant="h6" sx={{ mt: "2px" }} component="div">
