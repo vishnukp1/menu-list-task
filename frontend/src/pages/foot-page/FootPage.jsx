@@ -126,7 +126,7 @@ import { data } from "autoprefixer";
             />
           
             <MenuCard image1={JAR} image2={CUP} topLengths={topLengths_drinks} data={drinks} title="DRINKS"/>
-            <MenuCard brunch_className="lg:top-[352px] md:top-[600px] top-[830px]" image2={COCKTAIL_ONE} image1={COCKTAIL_TWO}  data={brunchCocktails} title="BRUNCH COCKTAILS"/>
+            <MenuCard brunch_className="lg:top-[352px] md:top-[570px]  xs:top-[780px]" image2={COCKTAIL_ONE} image1={COCKTAIL_TWO}  data={brunchCocktails} title="BRUNCH COCKTAILS"/>
             <FlavorCard />
   
             <div className="flex mb-[80px] mt-[-50px] justify-center">
