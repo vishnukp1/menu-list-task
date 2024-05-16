@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:3000/api'; // Replace with your actual API base URL
+const baseUrl = 'https://menu-list-task.onrender.com'; 
 
 
 export const useGetItems = () => {
