@@ -1,13 +1,12 @@
-const MenuCard = ({ image1, image2,  data, title,brunch_className }) => {
- 
+const MenuCard = ({ image1, image2, data, title, brunch_className }) => {
   return (
     <div className="relative px-0 md:px-20 py-3 mb-[15px] mx-7">
       <div className="relative md:mx-10 mx-3 border border-white rounded-lg shadow-lg">
-      <div
-  className={`${brunch_className} md:w-40 w-20 md:h-40 h-20 absolute right-[-10px]`}
->
-  <img className="w-full h-full object-contain" src={image1} alt="" />
-</div>
+        <div
+          className={`${brunch_className} md:w-40 w-20 md:h-40 h-20 absolute right-[-10px]`}
+        >
+          <img className="w-full h-full object-contain" src={image1} alt="" />
+        </div>
         <div className="md:w-40 w-20 md:h-40 h-20 absolute md:top-[-20px] top-[-10px] md:left-[-40px] left-[-20px]">
           <img className="w-full h-full object-cover" src={image2} alt="" />
         </div>
