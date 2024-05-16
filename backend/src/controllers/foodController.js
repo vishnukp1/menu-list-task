@@ -1,7 +1,7 @@
 const Category = require("../models/CategorySchema");
 const Item = require("../models/itemsSchema");
 
-const AddItems = async (req, res) => {
+const createMenu = async (req, res) => {
   const { title, category, price, menuItems } = req.body;
   
   const items = await Promise.all(menuItems.map(async (value) => {
@@ -37,6 +37,6 @@ const getItems = async (req, res) => {
 };
 
 module.exports = {
-  AddItems,
+  createMenu,
   getItems,
 };
