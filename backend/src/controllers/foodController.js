@@ -1,18 +1,17 @@
-const MenuCategory = require("../models/CategorySchema");
-const MenuItem = require("../models/itemsSchema");
+const Category = require("../models/CategorySchema");
+const Item = require("../models/itemsSchema");
 
 const AddItems = async (req, res) => {
   const { title, category, price, menuItems } = req.body;
   
-  const items = await Promise.all(menuItems.map(async (itemName) => {
-    const item = new MenuItem({ title: itemName });
-    console.log("hii");
+  const items = await Promise.all(menuItems.map(async (value) => {
+    const item = new Item({ title: value });
     await item.save();
     return item._id;
 }));
 
 
-  const categorylist = new MenuCategory({
+  const categorylist = new Category({
     title: title,
     category: category,
     price: price,
@@ -29,7 +28,7 @@ const AddItems = async (req, res) => {
 };
 
 const getItems = async (req, res) => {
-  const categories = await MenuCategory.find().populate("menuItems");
+  const categories = await Category.find().populate("menuItems");
   res.status(200).json({
     status: "success",
     message: "Items got Successfully",

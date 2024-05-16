@@ -116,21 +116,21 @@ import { data } from "autoprefixer";
        
         >
           <div className="relative">
-            {/* Left background image */}
+          
             <img
               src={LEFT_BG_IMAGE}
               alt="Left Background"
               className="absolute top-0 right-[-32px]h-full z-[1] object-cover"
             />
-            {/* Right background image */}
+         
             <img
               src={RIGHT_BG_IMAGE}
               alt="Right Background"
               className="absolute top-0 right-[-32px] h-full z-[1] object-cover"
             />
-            {/* Rest of your content */}
-            <MenuCard image1={JAR} image2={CUP} topLengths={topLengths_drinks} data={drinks}/>
-            <MenuCard image2={COCKTAIL_ONE} image1={COCKTAIL_TWO} topLengths={topLengths_brunch} data={brunchCocktails}/>
+          
+            <MenuCard image1={JAR} image2={CUP} topLengths={topLengths_drinks} data={drinks} title="DRINKS"/>
+            <MenuCard image2={COCKTAIL_ONE} image1={COCKTAIL_TWO} topLengths={topLengths_brunch} data={brunchCocktails} title="BRUNCH COCKTAILS"/>
             <FlavorCard />
   
             <div className="flex mb-[80px] mt-[-50px] justify-center">
