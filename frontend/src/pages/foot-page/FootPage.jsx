@@ -88,11 +88,14 @@ function FoodPage() {
             />
             <MenuCard image1={JAR} image2={CUP} topLengths={topLengths_drinks} data={drinks} title="DRINKS" />
             <MenuCard brunch_className="lg:top-[352px] md:top-[570px] xs:top-[780px]" image2={COCKTAIL_ONE} image1={COCKTAIL_TWO} data={brunchCocktails} title="BRUNCH COCKTAILS" />
-            <div className="flex mb-[80px] mt-[-50px] justify-center">
-              <button className="w-40 h-12 rounded border border-gray-300 bg-blue-500">
-                ORDER ONLINE
-              </button>
-            </div>
+            <div className="flex mb-12 mt-[30px]  justify-center">
+            <button
+              className="w-40 h-12  rounded border border-gray-300 bg-blue-500"
+           
+            >
+              ORDER ONLINE
+            </button>
+          </div>
             <ThreeColumnText />
           </div>
         </div>
