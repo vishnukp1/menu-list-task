@@ -10,7 +10,6 @@ function Profile() {
         handleUpdate(formData.get('firstName'), formData.get('lastName'), formData.get('gender'), formData.get('address'));
     };
 
-t
     return (
         <div>
             <h2>Profile</h2>
