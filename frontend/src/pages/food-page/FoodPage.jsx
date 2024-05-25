@@ -14,6 +14,9 @@ import Button from "../../components/Button";
 import { useGetFilteredItems } from "../../services/service";
 import MenuCard from "./components/MenuCard";
 import ThreeColumnText from "./components/ThreeColumnText";
+import ErrorModal from "../../common/error-model/ErrorModel"; 
+import { ComponentWithLoader } from "../../cores/app-layout/Applayout";
+import FlavorCard from "./components/FloverCard";
 
 function FoodPage() {
   const { drinks, brunchCocktails, error } = useGetFilteredItems();
@@ -26,6 +29,8 @@ function FoodPage() {
 
   return (
     <>
+     {error && <ErrorModal isErrorModalOpen={true} ErrorModalMessage={error.message} />}
+     <ComponentWithLoader>
       <div className="flex flex-col items-center justify-center text-center">
         <div className="relative w-full h-[311px]">
           <img
@@ -73,6 +78,7 @@ function FoodPage() {
           </div>
         </div>
       </div>
+        
       <div className="pb-[70px] pt-[86px]" style={{ backgroundImage: `url(${BACK_GROUND})` }}>
         <div>
           <div className="relative">
@@ -88,6 +94,7 @@ function FoodPage() {
             />
             <MenuCard image1={JAR} image2={CUP} topLengths={topLengths_drinks} data={drinks} title="DRINKS" />
             <MenuCard brunch_className="lg:top-[352px] md:top-[570px] xs:top-[780px]" image2={COCKTAIL_ONE} image1={COCKTAIL_TWO} data={brunchCocktails} title="BRUNCH COCKTAILS" />
+            <FlavorCard/>
             <div className="flex mb-12 mt-[30px]  justify-center">
             <button
               className="w-40 h-12  rounded border border-gray-300 bg-blue-500"
@@ -100,6 +107,7 @@ function FoodPage() {
           </div>
         </div>
       </div>
+      </ComponentWithLoader>
     </>
   );
 }

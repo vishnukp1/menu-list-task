@@ -1,5 +1,5 @@
 import { lazy } from "react";
 
-const FoodPage = lazy(() => import("../pages/foot-page/FootPage"));
+const FoodPage = lazy(() => import("../pages/food-page/FoodPage"));
 
 export { FoodPage };

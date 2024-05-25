@@ -2,6 +2,20 @@ import { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { routes } from "../../routing/intex";
 import { AppFooter, AppHeader } from "../../cores";
+import Loader from "../../common/loader/Loader";
+import { LoaderMiddleware } from "../../common/loader/LoaderMiddelware";
+
+export const  ComponentWithLoader = ({ children }) => {
+  
+  return (
+    <LoaderMiddleware>
+      <Loader>{children}</Loader>
+    </LoaderMiddleware>
+  );
+};
+
+
+
 
 const AppLayout = () => {
   return (
@@ -14,7 +28,7 @@ const AppLayout = () => {
             </div>
             <div className="h-full overflow-hidden">
               <section className="h-full">
-                <Suspense fallback={<div>loading...........</div>}>
+                <Suspense fallback={<div></div>}>
                   <Routes>
                     {routes.map((route) => (
                       <Route
